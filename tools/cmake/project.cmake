@@ -334,6 +334,8 @@ macro(project project_name)
         set(build_dir ${CMAKE_BINARY_DIR})
     endif()
 
+   file(TO_CMAKE_PATH ${sdkconfig} sdkconfig)
+
     __project_get_revision(project_ver)
 
     message(STATUS "Building ESP-IDF components for target ${IDF_TARGET}")
